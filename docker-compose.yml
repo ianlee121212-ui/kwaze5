@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  fastapi-app:
+    build: .
+    ports:
+      - "80:8000"  # [EC2 외부 80번 포트]를 [도시락 내부 8000번]과 연결!
+    restart: always # 컴퓨터가 꺼졌다 켜져도 자동으로 다시 실행!
